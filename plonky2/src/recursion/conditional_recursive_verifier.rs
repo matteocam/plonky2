@@ -128,7 +128,7 @@ impl<F: RichField + Extendable<D>, const D: usize> CircuitBuilder<F, D> {
     }
 
     /// Computes `if b { h0 } else { h1 }`.
-    pub(crate) fn select_hash(
+    fn select_hash(
         &mut self,
         b: BoolTarget,
         h0: HashOutTarget,
